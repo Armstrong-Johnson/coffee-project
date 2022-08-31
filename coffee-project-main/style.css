@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Press+Start+2P&display=swap');
 table {
     border-collapse: collapse;
     margin: 0;
@@ -9,4 +10,13 @@ td, th {
 }
 body{
     background-image: url("../top-view-coffee-beans-mockup/closeup-shot-fresh-coffee-beans-coffee-texture.jpg");
+}
+
+.font{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.font-2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
 }
