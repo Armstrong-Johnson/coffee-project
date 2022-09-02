@@ -1,16 +1,5 @@
 "use strict"
 
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee w-50 d-inline-flex">';
-    html += '<td class="d-none">' + coffee.id + '</td>';
-    html += '<td class="h4">' + coffee.name + '</td>';
-    html += '<td class="text-white-50 pt-3">' + coffee.roast[0] + '</td>';
-    html += '</tr>';
-
-    return html;
-}
-/*the renderCoffee() gives each key-value pair of a passed obj a <tr> <td> element so that they can be displayed within an HTML table*/
-
 function renderCoffees(coffees) {
     var html = '';
     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -19,7 +8,17 @@ function renderCoffees(coffees) {
     return html;
 }
 
-/*The renderCoffees() runs a for-loop on the coffees array below. The information stored within each obj of the array is passed as a parameter of the renderCoffee() -see above- and then added to the html var. html is then returned to the tbody.innerHTML to be displayed on screen*/
+/*The renderCoffees() runs a for-loop on the coffees array below. The information stored within each obj of the array is passed as a parameter of the renderCoffee() -see BELOW- and then added to the html var. html is then returned to the tbody.innerHTML to be displayed on screen*/
+
+function renderCoffee(coffee) {
+    var html = '<div class="coffee w-50 d-inline-flex">';
+    html += '<h4 class="h4">' + coffee.name + '</h4>';
+    html += '<p class="text-white-50 pt-3">' + coffee.roast[0] + '</p>';
+    html += '</div>';
+
+    return html;
+}
+/*the renderCoffee() gives each key-value pair of a passed obj a <tr> <td> element so that they can be displayed within an HTML table*/
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -70,15 +69,16 @@ var coffees = [
     {id: 13, name: 'Italian', roast: ['dark', 'all']},
     {id: 14, name: 'French', roast: ['dark', 'all']},
 ];
+coffees.reverse()
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 let coffeeName = document.querySelector('#coffee-name');
+
 let roastAdd = document.querySelector('#roast-addition');
 let coffeeAdd = document.querySelector('#coffee-addition');
 let addButton = document.querySelector('#add-coffee')
-
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees)
