@@ -12,8 +12,9 @@ function renderCoffees(coffees) {
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee w-50 d-inline-flex">';
+    html += '<h4 class="d-none">' + coffee.id + '</h4>';
     html += '<h4 class="h4">' + coffee.name + '</h4>';
-    html += '<p class="text-white-50 pt-3">' + coffee.roast[0] + '</p>';
+    html += '<p class="text-white-50 pt-1 ps-2">' + coffee.roast[0] + '</p>';
     html += '</div>';
 
     return html;
@@ -44,7 +45,7 @@ function addCoffee(f) {
 
     newCoffee.id = addID
     newCoffee.name = addCoffee
-    newCoffee.roast = [addRoast,'all']
+    newCoffee.roast = [addRoast,'All']
 
 
     coffees.push(newCoffee)
@@ -54,20 +55,20 @@ function addCoffee(f) {
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
-    {id: 1, name: 'Light City', roast: ['light', 'all']},
-    {id: 2, name: 'Half City', roast: ['light', 'all']},
-    {id: 3, name: 'Cinnamon', roast: ['light', 'all']},
-    {id: 4, name: 'City', roast: ['medium', 'all']},
-    {id: 5, name: 'American', roast: ['medium', 'all']},
-    {id: 6, name: 'Breakfast', roast: ['medium', 'all']},
-    {id: 7, name: 'High', roast: ['dark', 'all']},
-    {id: 8, name: 'Continental', roast: ['dark', 'all']},
-    {id: 9, name: 'New Orleans', roast: ['dark', 'all']},
-    {id: 10, name: 'European', roast: ['dark', 'all']},
-    {id: 11, name: 'Espresso', roast: ['dark', 'all']},
-    {id: 12, name: 'Viennese', roast: ['dark', 'all']},
-    {id: 13, name: 'Italian', roast: ['dark', 'all']},
-    {id: 14, name: 'French', roast: ['dark', 'all']},
+    {id: 1, name: 'Light City', roast: ['Light', 'All']},
+    {id: 2, name: 'Half City', roast: ['Light', 'All']},
+    {id: 3, name: 'Cinnamon', roast: ['Light', 'All']},
+    {id: 4, name: 'City', roast: ['Medium', 'All']},
+    {id: 5, name: 'American', roast: ['Medium', 'All']},
+    {id: 6, name: 'Breakfast', roast: ['Medium', 'All']},
+    {id: 7, name: 'High', roast: ['Dark', 'All']},
+    {id: 8, name: 'Continental', roast: ['Dark', 'All']},
+    {id: 9, name: 'New Orleans', roast: ['Dark', 'All']},
+    {id: 10, name: 'European', roast: ['Dark', 'All']},
+    {id: 11, name: 'Espresso', roast: ['Dark', 'All']},
+    {id: 12, name: 'Viennese', roast: ['Dark', 'All']},
+    {id: 13, name: 'Italian', roast: ['Dark', 'All']},
+    {id: 14, name: 'French', roast: ['Dark', 'All']},
 ];
 coffees.reverse()
 
